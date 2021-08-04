@@ -1,0 +1,29 @@
+pipeline {
+    agent any 
+  stages {
+    stage ('apple fruit') {
+      when {
+                expression { fruit == 'apple'}
+            }
+            steps {
+                echo "i am greate among all fruits"
+            }
+    }
+    stage ('mango fruit') {
+      when {
+                expression { fruit == 'mango'}
+            }
+            steps {
+                echo "How dare u to talk like that!! No i am greate"
+            }
+    }
+   stage ('Kivi fruit') {
+      when {
+                expression { fruit == 'Kivi'}
+            }
+            steps {
+                echo "Shut up stupids!!"
+            }
+        }
+  }
+}
