@@ -1,31 +1,29 @@
 pipeline {
-    agent any
-
-    stages {
-        stage('Hello') {
-            steps {
-                echo 'Hello hru This is leela'
+    agent any 
+  stages {
+    stage ('apple fruit') {
+      when {
+                expression { fruit == 'apple'}
             }
-        }
-        stage('Build') {
             steps {
-                echo 'Building'
+                echo "i am greate among all fruits"
             }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying the file'
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'Testing'
-            }
-        }
-        stage('Release') {
-            steps {
-                echo 'Releasing'
-            }
-        }
     }
+    stage ('mango fruit') {
+      when {
+                expression { fruit == 'mango'}
+            }
+            steps {
+                echo "How dare u to talk like that!! No i am greate"
+            }
+    }
+   stage ('Kivi fruit') {
+      when {
+                expression { fruit == 'Kivi'}
+            }
+            steps {
+                echo "Shut up stupids!!"
+            }
+        }
+  }
 }
